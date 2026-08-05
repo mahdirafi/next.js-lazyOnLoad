@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+ 
+# Next.js LazyOnLoad
 
-## Getting Started
+A lightweight utility for **lazy loading components, scripts, and assets** in Next.js projects.  
+This helps reduce initial bundle size, improve performance, and deliver a smoother user experience.
 
-First, run the development server:
+---
 
+## Features
+- Lazy load components when they enter the viewport  
+- Defer scripts until needed  
+- Optimize images with lazy loading  
+- Simple API, minimal configuration  
+- Boosts Next.js performance and Core Web Vitals  
+
+---
+
+## Installation
 ```bash
-npm run dev
+npm install next.js-lazyOnLoad
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn add next.js-lazyOnLoad
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Usage
+```jsx
+import { LazyOnLoad } from "next.js-lazyOnLoad";
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+export default function Page() {
+  return (
+    <div>
+      <h1>Example with LazyOnLoad</h1>
+      <LazyOnLoad>
+        <HeavyComponent />
+      </LazyOnLoad>
+    </div>
+  );
+}
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Why LazyOnLoad?
+- Reduce **initial page load time**  
+- Improve **SEO ranking** with faster performance  
+- Deliver a **better user experience** without extra complexity  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributing
+Contributions are welcome!  
+Please open an issue or submit a pull request to suggest improvements.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
+MIT License – free to use, modify, and distribute.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ 
